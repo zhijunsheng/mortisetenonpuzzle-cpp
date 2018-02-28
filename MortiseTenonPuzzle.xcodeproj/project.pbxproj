@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		078901D22045858D009ED751 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 078901D12045858D009ED751 /* main.cpp */; };
+		078901E7204676FB009ED751 /* SimpleLoopTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 078901E6204676FB009ED751 /* SimpleLoopTests.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +26,20 @@
 /* Begin PBXFileReference section */
 		078901CE2045858D009ED751 /* MortiseTenonPuzzle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MortiseTenonPuzzle; sourceTree = BUILT_PRODUCTS_DIR; };
 		078901D12045858D009ED751 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		078901DC20467355009ED751 /* MortiseTenonPuzzleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MortiseTenonPuzzleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		078901E020467355009ED751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		078901E6204676FB009ED751 /* SimpleLoopTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SimpleLoopTests.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		078901CB2045858D009ED751 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		078901D920467355009ED751 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				078901D02045858D009ED751 /* MortiseTenonPuzzle */,
+				078901DD20467355009ED751 /* MortiseTenonPuzzleTests */,
 				078901CF2045858D009ED751 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				078901CE2045858D009ED751 /* MortiseTenonPuzzle */,
+				078901DC20467355009ED751 /* MortiseTenonPuzzleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +73,15 @@
 				078901D12045858D009ED751 /* main.cpp */,
 			);
 			path = MortiseTenonPuzzle;
+			sourceTree = "<group>";
+		};
+		078901DD20467355009ED751 /* MortiseTenonPuzzleTests */ = {
+			isa = PBXGroup;
+			children = (
+				078901E6204676FB009ED751 /* SimpleLoopTests.mm */,
+				078901E020467355009ED751 /* Info.plist */,
+			);
+			path = MortiseTenonPuzzleTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +104,23 @@
 			productReference = 078901CE2045858D009ED751 /* MortiseTenonPuzzle */;
 			productType = "com.apple.product-type.tool";
 		};
+		078901DB20467355009ED751 /* MortiseTenonPuzzleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 078901E320467355009ED751 /* Build configuration list for PBXNativeTarget "MortiseTenonPuzzleTests" */;
+			buildPhases = (
+				078901D820467355009ED751 /* Sources */,
+				078901D920467355009ED751 /* Frameworks */,
+				078901DA20467355009ED751 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MortiseTenonPuzzleTests;
+			productName = MortiseTenonPuzzleTests;
+			productReference = 078901DC20467355009ED751 /* MortiseTenonPuzzleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +131,10 @@
 				ORGANIZATIONNAME = "GoldThumb Inc.";
 				TargetAttributes = {
 					078901CD2045858D009ED751 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					078901DB20467355009ED751 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -110,9 +153,20 @@
 			projectRoot = "";
 			targets = (
 				078901CD2045858D009ED751 /* MortiseTenonPuzzle */,
+				078901DB20467355009ED751 /* MortiseTenonPuzzleTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		078901DA20467355009ED751 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		078901CA2045858D009ED751 /* Sources */ = {
@@ -120,6 +174,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				078901D22045858D009ED751 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		078901D820467355009ED751 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				078901E7204676FB009ED751 /* SimpleLoopTests.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +309,32 @@
 			};
 			name = Release;
 		};
+		078901E120467355009ED751 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = J8B74FCZCC;
+				INFOPLIST_FILE = MortiseTenonPuzzleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.goldthumb.MortiseTenonPuzzleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		078901E220467355009ED751 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = J8B74FCZCC;
+				INFOPLIST_FILE = MortiseTenonPuzzleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.goldthumb.MortiseTenonPuzzleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -264,6 +352,15 @@
 			buildConfigurations = (
 				078901D62045858D009ED751 /* Debug */,
 				078901D72045858D009ED751 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		078901E320467355009ED751 /* Build configuration list for PBXNativeTarget "MortiseTenonPuzzleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				078901E120467355009ED751 /* Debug */,
+				078901E220467355009ED751 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
