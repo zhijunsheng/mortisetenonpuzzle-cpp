@@ -17,22 +17,22 @@ using namespace std;
 @implementation SimpleLoopTests
 
 - (void)testAdd {
-    XCTAssertEqual(8, Utils::add(3, 5));
+    XCTAssertEqual(8, SimpleLoopTestsUtils::add(3, 5));
     
     cout << "hello .mm" << endl;
 }
 
 - (void)testFindMax {
     int arr[5] = {3, 7, 2, 13, 5};
-    XCTAssertEqual(13, Utils::findMaxUsingForLoop(arr, 5));
-    XCTAssertEqual(13, Utils::findMaxUsingWhileLoop(arr, 5));
+    XCTAssertEqual(13, SimpleLoopTestsUtils::findMaxUsingForLoop(arr, 5));
+    XCTAssertEqual(13, SimpleLoopTestsUtils::findMaxUsingWhileLoop(arr, 5));
 }
 
 - (void)testFactorial {
-    XCTAssertEqual(120, Utils::factorial(5));
+    XCTAssertEqual(120, SimpleLoopTestsUtils::factorial(5));
 }
 
-class Utils {
+class SimpleLoopTestsUtils {
 public:
     static int factorial(int n) {
         int total = 1;
