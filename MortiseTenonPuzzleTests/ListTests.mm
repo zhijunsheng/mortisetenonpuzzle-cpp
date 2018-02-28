@@ -8,7 +8,6 @@
 
 #import <XCTest/XCTest.h>
 #import <iostream>
-using namespace std;
 
 @interface ListTests : XCTestCase
 
@@ -103,9 +102,9 @@ public:
     virtual const E& getValue() const = 0;
 };
 
-void Assert(bool val, string s) {
+void Assert(bool val, std::string s) {
     if (!val) {
-        cout << "Assertion Failed: " << s << endl;
+        std::cout << "Assertion Failed: " << s << std::endl;
         exit(-1);
     }
 }

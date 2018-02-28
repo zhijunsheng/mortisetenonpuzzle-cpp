@@ -12,6 +12,7 @@
 		078901E920468AA6009ED751 /* RecursionTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 078901E820468AA6009ED751 /* RecursionTests.mm */; };
 		078901EB204695E3009ED751 /* ListTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 078901EA204695E3009ED751 /* ListTests.mm */; };
 		078901EF20472D76009ED751 /* TemplateTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 078901EE20472D76009ED751 /* TemplateTests.mm */; };
+		078901F220475891009ED751 /* StringTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 078901F120475891009ED751 /* StringTests.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +37,7 @@
 		078901EA204695E3009ED751 /* ListTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ListTests.mm; sourceTree = "<group>"; };
 		078901EE20472D76009ED751 /* TemplateTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TemplateTests.mm; sourceTree = "<group>"; };
 		078901F02047446B009ED751 /* templatevector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = templatevector.h; sourceTree = "<group>"; };
+		078901F120475891009ED751 /* StringTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = StringTests.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				078901E6204676FB009ED751 /* SimpleLoopTests.mm */,
+				078901F120475891009ED751 /* StringTests.mm */,
 				078901E820468AA6009ED751 /* RecursionTests.mm */,
 				078901EA204695E3009ED751 /* ListTests.mm */,
 				078901EE20472D76009ED751 /* TemplateTests.mm */,
@@ -195,6 +198,7 @@
 				078901E920468AA6009ED751 /* RecursionTests.mm in Sources */,
 				078901EF20472D76009ED751 /* TemplateTests.mm in Sources */,
 				078901EB204695E3009ED751 /* ListTests.mm in Sources */,
+				078901F220475891009ED751 /* StringTests.mm in Sources */,
 				078901E7204676FB009ED751 /* SimpleLoopTests.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

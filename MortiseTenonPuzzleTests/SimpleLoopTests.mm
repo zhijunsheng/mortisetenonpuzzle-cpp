@@ -8,7 +8,6 @@
 
 #import <XCTest/XCTest.h>
 #import <iostream>
-using namespace std;
 
 @interface SimpleLoopTests : XCTestCase
 
@@ -19,7 +18,7 @@ using namespace std;
 - (void)testAdd {
     XCTAssertEqual(8, SimpleLoopTestsUtils::add(3, 5));
     
-    cout << "hello .mm" << endl;
+    std::cout << "hello .mm" << std::endl;
 }
 
 - (void)testFindMax {
