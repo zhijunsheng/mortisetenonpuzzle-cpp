@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		078901D22045858D009ED751 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 078901D12045858D009ED751 /* main.cpp */; };
 		078901E7204676FB009ED751 /* SimpleLoopTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 078901E6204676FB009ED751 /* SimpleLoopTests.mm */; };
+		078901E920468AA6009ED751 /* RecursionTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 078901E820468AA6009ED751 /* RecursionTests.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,7 @@
 		078901DC20467355009ED751 /* MortiseTenonPuzzleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MortiseTenonPuzzleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		078901E020467355009ED751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		078901E6204676FB009ED751 /* SimpleLoopTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SimpleLoopTests.mm; sourceTree = "<group>"; };
+		078901E820468AA6009ED751 /* RecursionTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RecursionTests.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				078901E6204676FB009ED751 /* SimpleLoopTests.mm */,
+				078901E820468AA6009ED751 /* RecursionTests.mm */,
 				078901E020467355009ED751 /* Info.plist */,
 			);
 			path = MortiseTenonPuzzleTests;
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				078901E920468AA6009ED751 /* RecursionTests.mm in Sources */,
 				078901E7204676FB009ED751 /* SimpleLoopTests.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
