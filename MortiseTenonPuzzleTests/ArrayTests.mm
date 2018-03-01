@@ -84,5 +84,44 @@
     sixInts = 0;
 }
 
+- (void)testPointerVsArray {
+    char charArr[128];  // allocate storage for 128 characters
+    char* arrPointer;   // allocate space for a pointer
+    XCTAssertEqual(128, sizeof(charArr));
+    XCTAssertEqual(8, sizeof(arrPointer));
+    
+    charArr[10] = 'B';
+    XCTAssertEqual('B', charArr[10]);
+    
+//    arrPointer[10] = 'E'; // crash
+    
+    // range-based for loop
+    
+    for(char& c: charArr) c = '\0';
+    
+    arrPointer = charArr;
+//    for(char& c: arrPointer) c = '\0'; // not legal
+    
+    // charArr is a constant
+    
+    *charArr = '\0';
+//    charArr++; // not allowed
+    
+    // array and pointer work together
+    char zeros[8];
+    char* zerosPointer = zeros;
+    for(int i = 0; i < 7; i++) {
+        *zerosPointer++ = 'W';
+    }
+    *zerosPointer = '\0';
+    XCTAssertEqual('W', zeros[6]);
+    
+    zerosPointer -=7; // or zerosPointer = zeros;
+    XCTAssertEqual('W', zerosPointer[6]);
+    std::cout << zerosPointer << std::endl; // WWWWWWW
+    std::cout << zeros << std::endl;        // WWWWWWW
+    XCTAssertEqual(0, strcmp(zeros, zerosPointer));
+}
+
 @end
 
