@@ -71,7 +71,7 @@
     XCTAssertEqual(7, fiveInts[4]);
     
     delete[] fiveInts;
-    fiveInts = 0;
+    fiveInts = nullptr;
     
     int* sixInts = new int[6];
     for(int i = 0; i < 6; i++) {
@@ -81,7 +81,7 @@
     XCTAssertEqual(5, sixInts[5]);
     
     delete[] sixInts;
-    sixInts = 0;
+    sixInts = nullptr;
 }
 
 - (void)testPointerVsArray {
