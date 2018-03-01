@@ -60,15 +60,28 @@
     
     float floats[] = {0.1, 0.2, 0.31, 0.4};
     XCTAssertTrue(floats[2] > 0.3);
-    
-    int* fivePrimes = new int[5];
+}
+
+- (void)testIntArrayWithNew {
+    int* fiveInts = new int[5];
     for(int i = 0; i < 5; i++) {
-//        *fivePrimes = i + 3;
-        fivePrimes[i] = i + 3;
-        fivePrimes++;
+        fiveInts[i] = i + 3;
     }
-    XCTAssertEqual(3, fivePrimes[0]);
-    XCTAssertEqual(7, fivePrimes[4]);
+    XCTAssertEqual(3, fiveInts[0]);
+    XCTAssertEqual(7, fiveInts[4]);
+    
+    delete[] fiveInts;
+    fiveInts = 0;
+    
+    int* sixInts = new int[6];
+    for(int i = 0; i < 6; i++) {
+        *(sixInts + i) = i;
+    }
+    XCTAssertEqual(0, sixInts[0]);
+    XCTAssertEqual(5, sixInts[5]);
+    
+    delete[] sixInts;
+    sixInts = 0;
 }
 
 @end
