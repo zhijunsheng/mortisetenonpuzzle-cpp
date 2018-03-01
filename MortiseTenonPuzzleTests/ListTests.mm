@@ -31,6 +31,9 @@
     XCTAssertEqual(5, intList->currPos());
     intList->prev();
     XCTAssertEqual(4, intList->currPos());
+    
+    delete intList;
+    intList = 0;
 }
 
 - (void)testLList {
@@ -49,6 +52,9 @@
     XCTAssertEqual(5, intList->currPos());
     intList->prev();
     XCTAssertEqual(4, intList->currPos());
+    
+    delete intList;
+    intList = 0;
 }
 
 template <typename E> class List {
