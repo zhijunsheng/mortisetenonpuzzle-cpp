@@ -123,5 +123,26 @@
     XCTAssertEqual(0, strcmp(zeros, zerosPointer));
 }
 
+- (void)testArrayOfPointers {
+    const char *const months[] = {
+        "invalid",
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+    };
+    
+    XCTAssertEqual(0, strcmp("January", months[1]));
+    XCTAssertEqual(0, strcmp("November", months[11]));
+}
+
 @end
 
