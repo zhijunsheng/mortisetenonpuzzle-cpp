@@ -1,5 +1,5 @@
 //
-//  ListTests.mm
+//  SinglyLinkedListTests.mm
 //  MortiseTenonPuzzleTests
 //
 //  Created by Donald Sheng on 2018-02-28.
@@ -10,14 +10,14 @@
 #import <iostream>
 #import "list.h"
 
-@interface ListTests : XCTestCase
+@interface SinglyLinkedListTests : XCTestCase
 
 @end
 
-@implementation ListTests
+@implementation SinglyLinkedListTests
 
 - (void)testAList {
-    ListTestsNS::List<int> *intList = new ListTestsNS::AList<int>;
+    ListTestsNS::List<int> *intList = new SinglyLinkedListTestsNS::AList<int>;
     intList->append(13);
     intList->append(12);
     intList->append(20);
@@ -26,8 +26,8 @@
     
     XCTAssertEqual(5, intList->length());
     
-    XCTAssertTrue(find(*intList, 8));
-    XCTAssertFalse(find(*intList, 7));
+    XCTAssertTrue(SinglyLinkedListTestsNS::find(*intList, 8));
+    XCTAssertFalse(SinglyLinkedListTestsNS::find(*intList, 7));
     
     XCTAssertEqual(5, intList->currPos());
     intList->prev();
@@ -38,7 +38,7 @@
 }
 
 - (void)testLList {
-    ListTestsNS::List<int> *intList = new ListTestsNS::LList<int>;
+    ListTestsNS::List<int> *intList = new SinglyLinkedListTestsNS::LList<int>;
     intList->append(13);
     intList->append(12);
     intList->append(20);
@@ -47,8 +47,8 @@
     
     XCTAssertEqual(5, intList->length());
     
-    XCTAssertTrue(find(*intList, 8));
-    XCTAssertFalse(find(*intList, 7));
+    XCTAssertTrue(SinglyLinkedListTestsNS::find(*intList, 8));
+    XCTAssertFalse(SinglyLinkedListTestsNS::find(*intList, 7));
     
     XCTAssertEqual(5, intList->currPos());
     intList->prev();
@@ -58,7 +58,7 @@
     intList = nullptr;
 }
 
-namespace ListTestsNS {
+namespace SinglyLinkedListTestsNS {
 
 void Assert(bool val, std::string s) {
     if (!val) {
@@ -67,7 +67,7 @@ void Assert(bool val, std::string s) {
     }
 }
 
-template <typename E> class AList : public List<E> {
+template <typename E> class AList : public ListTestsNS::List<E> {
 private:
     int maxSize;    // Maximum size of list
     int listSize;   // Number of list items now
@@ -135,7 +135,7 @@ public:
     }
 };
 
-bool find(List<int>& L, int K) {
+bool find(ListTestsNS::List<int>& L, int K) {
     int it;
     for (L.moveToStart(); L.currPos() < L.length(); L.next()) {
         it = L.getValue();
@@ -181,7 +181,7 @@ template <typename E>
 Link<E>* Link<E>::freelist = NULL;
 
 // Linked list implementation
-template <typename E> class LList: public List<E> {
+template <typename E> class LList: public ListTestsNS::List<E> {
 private:
     Link<E>* head;      // Pointer to list header
     Link<E>* tail;      // Pointer to last element
