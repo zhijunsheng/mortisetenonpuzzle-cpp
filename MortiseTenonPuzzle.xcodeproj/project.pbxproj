@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		076534E62049FC57008FC177 /* ArrayBasedListTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 076534E52049FC57008FC177 /* ArrayBasedListTests.mm */; };
 		078901D22045858D009ED751 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 078901D12045858D009ED751 /* main.cpp */; };
 		078901E7204676FB009ED751 /* SimpleLoopTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 078901E6204676FB009ED751 /* SimpleLoopTests.mm */; };
 		078901E920468AA6009ED751 /* RecursionTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 078901E820468AA6009ED751 /* RecursionTests.mm */; };
@@ -32,6 +33,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		076534E52049FC57008FC177 /* ArrayBasedListTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ArrayBasedListTests.mm; sourceTree = "<group>"; };
 		078901CE2045858D009ED751 /* MortiseTenonPuzzle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MortiseTenonPuzzle; sourceTree = BUILT_PRODUCTS_DIR; };
 		078901D12045858D009ED751 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		078901DC20467355009ED751 /* MortiseTenonPuzzleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MortiseTenonPuzzleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +105,7 @@
 				07A418382047A4CC00F8EA53 /* StaticVariableTests.mm */,
 				078901E820468AA6009ED751 /* RecursionTests.mm */,
 				07A4183C2049B9CE00F8EA53 /* list.h */,
+				076534E52049FC57008FC177 /* ArrayBasedListTests.mm */,
 				078901EA204695E3009ED751 /* SinglyLinkedListTests.mm */,
 				07A4183D2049CC9600F8EA53 /* DoublyLinkedListTests.mm */,
 				078901F02047446B009ED751 /* templatevector.h */,
@@ -214,6 +217,7 @@
 				07A4183E2049CC9600F8EA53 /* DoublyLinkedListTests.mm in Sources */,
 				078901E920468AA6009ED751 /* RecursionTests.mm in Sources */,
 				078901EF20472D76009ED751 /* TemplateTests.mm in Sources */,
+				076534E62049FC57008FC177 /* ArrayBasedListTests.mm in Sources */,
 				078901EB204695E3009ED751 /* SinglyLinkedListTests.mm in Sources */,
 				078901F220475891009ED751 /* StringTests.mm in Sources */,
 				078901E7204676FB009ED751 /* SimpleLoopTests.mm in Sources */,
