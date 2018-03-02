@@ -12,33 +12,35 @@
 
 #endif /* templatevector_h */
 
-// TemplateVector - a simple templatized vector class
-template <typename T> class TemplateVector {
-public:
-    TemplateVector(int arraySize) {
-        // store off the number of elements
-        sz = arraySize;
-        array = new T[arraySize];
-        reset();
-    }
-    
-    int size() { return writeIndex; }
-    
-    void reset() { writeIndex = 0; readIndex = 0; }
-    
-    void add(const T& object) {
-        if (writeIndex < sz) {
-            array[writeIndex++] = object;
+namespace TemplateTestsNS {
+    // TemplateVector - a simple templatized vector class
+    template <typename T> class TemplateVector {
+    public:
+        TemplateVector(int arraySize) {
+            // store off the number of elements
+            sz = arraySize;
+            array = new T[arraySize];
+            reset();
         }
-    }
-    
-    T& get() {
-        return array[readIndex++];
-    }
-    
-protected:
-    int sz;
-    int writeIndex;
-    int readIndex;
-    T* array;
-};
+        
+        int size() { return writeIndex; }
+        
+        void reset() { writeIndex = 0; readIndex = 0; }
+        
+        void add(const T& object) {
+            if (writeIndex < sz) {
+                array[writeIndex++] = object;
+            }
+        }
+        
+        T& get() {
+            return array[readIndex++];
+        }
+        
+    protected:
+        int sz;
+        int writeIndex;
+        int readIndex;
+        T* array;
+    };
+}

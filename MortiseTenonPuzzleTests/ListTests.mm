@@ -16,7 +16,7 @@
 @implementation ListTests
 
 - (void)testAList {
-    List<int> *intList = new AList<int>;
+    ListTestsNS::List<int> *intList = new ListTestsNS::AList<int>;
     intList->append(13);
     intList->append(12);
     intList->append(20);
@@ -25,8 +25,8 @@
     
     XCTAssertEqual(5, intList->length());
     
-    XCTAssertTrue(ListTestsUtils::find(*intList, 8));
-    XCTAssertFalse(ListTestsUtils::find(*intList, 7));
+    XCTAssertTrue(find(*intList, 8));
+    XCTAssertFalse(find(*intList, 7));
     
     XCTAssertEqual(5, intList->currPos());
     intList->prev();
@@ -37,7 +37,7 @@
 }
 
 - (void)testLList {
-    List<int> *intList = new LList<int>;
+    ListTestsNS::List<int> *intList = new ListTestsNS::LList<int>;
     intList->append(13);
     intList->append(12);
     intList->append(20);
@@ -46,8 +46,8 @@
     
     XCTAssertEqual(5, intList->length());
     
-    XCTAssertTrue(ListTestsUtils::find(*intList, 8));
-    XCTAssertFalse(ListTestsUtils::find(*intList, 7));
+    XCTAssertTrue(find(*intList, 8));
+    XCTAssertFalse(find(*intList, 7));
     
     XCTAssertEqual(5, intList->currPos());
     intList->prev();
@@ -57,6 +57,7 @@
     intList = nullptr;
 }
 
+namespace ListTestsNS {
 template <typename E> class List {
 private:
     void operator =(const List&) {} // Protect assignment
@@ -183,17 +184,14 @@ public:
     }
 };
 
-class ListTestsUtils {
-public:
-    static bool find(List<int>& L, int K) {
-        int it;
-        for (L.moveToStart(); L.currPos() < L.length(); L.next()) {
-            it = L.getValue();
-            if (K == it) return true;
-        }
-        return false;
+bool find(List<int>& L, int K) {
+    int it;
+    for (L.moveToStart(); L.currPos() < L.length(); L.next()) {
+        it = L.getValue();
+        if (K == it) return true;
     }
-};
+    return false;
+}
 
 // Singly linked list node with freelist support
 template <typename E> class Link {
@@ -322,6 +320,7 @@ public:
         return curr->next->element;
     }
 };
-
+}
+    
 @end
 

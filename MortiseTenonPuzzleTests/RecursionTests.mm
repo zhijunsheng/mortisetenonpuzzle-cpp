@@ -40,19 +40,16 @@ using namespace std;
 }
 
 - (void)testFactorial {
-    XCTAssertEqual(120, RecursionTestsUtils::factorial(5));
+    XCTAssertEqual(120, RecursionTestsNS::factorial(5));
 }
 
-class RecursionTestsUtils {
-public:
-    
-    static int factorial(int x) {
+namespace RecursionTestsNS {
+    int factorial(int x) {
         if (x == 1) {
             return 1;
         }
         return x * factorial(x - 1);
     }
-    
-};
+}
 
 @end

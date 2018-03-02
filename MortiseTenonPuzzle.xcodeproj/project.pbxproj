@@ -100,8 +100,8 @@
 				07A418382047A4CC00F8EA53 /* StaticVariableTests.mm */,
 				078901E820468AA6009ED751 /* RecursionTests.mm */,
 				078901EA204695E3009ED751 /* ListTests.mm */,
-				078901EE20472D76009ED751 /* TemplateTests.mm */,
 				078901F02047446B009ED751 /* templatevector.h */,
+				078901EE20472D76009ED751 /* TemplateTests.mm */,
 				078901E020467355009ED751 /* Info.plist */,
 			);
 			path = MortiseTenonPuzzleTests;
