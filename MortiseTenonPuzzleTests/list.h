@@ -9,9 +9,6 @@
 #ifndef list_h
 #define list_h
 
-
-#endif /* list_h */
-
 namespace ListTestsNS {
     
     template <typename E> class List {
@@ -65,3 +62,5 @@ namespace ListTestsNS {
         virtual const E& getValue() const = 0;
     };
 }
+
+#endif /* list_h */

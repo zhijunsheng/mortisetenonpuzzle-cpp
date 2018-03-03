@@ -11,7 +11,6 @@
 #import "stack.h"
 
 @interface ArrayBasedStackTests : XCTestCase
-
 @end
 
 @implementation ArrayBasedStackTests

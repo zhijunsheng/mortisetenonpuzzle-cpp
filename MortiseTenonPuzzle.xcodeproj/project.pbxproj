@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		076534E62049FC57008FC177 /* ArrayBasedListTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 076534E52049FC57008FC177 /* ArrayBasedListTests.mm */; };
 		076534E8204A07C8008FC177 /* ArrayBasedStackTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 076534E7204A07C8008FC177 /* ArrayBasedStackTests.mm */; };
+		07653544204AF740008FC177 /* BSTTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07653543204AF740008FC177 /* BSTTests.mm */; };
+		07653547204AFF6D008FC177 /* DictionaryTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07653546204AFF6D008FC177 /* DictionaryTests.mm */; };
 		078901D22045858D009ED751 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 078901D12045858D009ED751 /* main.cpp */; };
 		078901E7204676FB009ED751 /* SimpleLoopTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 078901E6204676FB009ED751 /* SimpleLoopTests.mm */; };
 		078901E920468AA6009ED751 /* RecursionTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 078901E820468AA6009ED751 /* RecursionTests.mm */; };
@@ -37,6 +39,10 @@
 		076534E52049FC57008FC177 /* ArrayBasedListTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ArrayBasedListTests.mm; sourceTree = "<group>"; };
 		076534E7204A07C8008FC177 /* ArrayBasedStackTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ArrayBasedStackTests.mm; sourceTree = "<group>"; };
 		076534E9204A07E1008FC177 /* stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
+		07653542204ABC4C008FC177 /* binnode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = binnode.h; sourceTree = "<group>"; };
+		07653543204AF740008FC177 /* BSTTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BSTTests.mm; sourceTree = "<group>"; };
+		07653545204AFD5F008FC177 /* dictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dictionary.h; sourceTree = "<group>"; };
+		07653546204AFF6D008FC177 /* DictionaryTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DictionaryTests.mm; sourceTree = "<group>"; };
 		078901CE2045858D009ED751 /* MortiseTenonPuzzle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MortiseTenonPuzzle; sourceTree = BUILT_PRODUCTS_DIR; };
 		078901D12045858D009ED751 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		078901DC20467355009ED751 /* MortiseTenonPuzzleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MortiseTenonPuzzleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +121,10 @@
 				076534E7204A07C8008FC177 /* ArrayBasedStackTests.mm */,
 				078901F02047446B009ED751 /* templatevector.h */,
 				078901EE20472D76009ED751 /* TemplateTests.mm */,
+				07653545204AFD5F008FC177 /* dictionary.h */,
+				07653546204AFF6D008FC177 /* DictionaryTests.mm */,
+				07653542204ABC4C008FC177 /* binnode.h */,
+				07653543204AF740008FC177 /* BSTTests.mm */,
 				078901E020467355009ED751 /* Info.plist */,
 			);
 			path = MortiseTenonPuzzleTests;
@@ -222,12 +232,14 @@
 				07A4183E2049CC9600F8EA53 /* DoublyLinkedListTests.mm in Sources */,
 				078901E920468AA6009ED751 /* RecursionTests.mm in Sources */,
 				078901EF20472D76009ED751 /* TemplateTests.mm in Sources */,
+				07653544204AF740008FC177 /* BSTTests.mm in Sources */,
 				076534E62049FC57008FC177 /* ArrayBasedListTests.mm in Sources */,
 				078901EB204695E3009ED751 /* SinglyLinkedListTests.mm in Sources */,
 				076534E8204A07C8008FC177 /* ArrayBasedStackTests.mm in Sources */,
 				078901F220475891009ED751 /* StringTests.mm in Sources */,
 				078901E7204676FB009ED751 /* SimpleLoopTests.mm in Sources */,
 				07A418372047971500F8EA53 /* ArrayTests.mm in Sources */,
+				07653547204AFF6D008FC177 /* DictionaryTests.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,9 +9,6 @@
 #ifndef stack_h
 #define stack_h
 
-
-#endif /* stack_h */
-
 namespace StackTestsNS {
     // Stack abstract class
     template <typename E> class Stack {
@@ -42,3 +39,5 @@ namespace StackTestsNS {
         virtual int length() const = 0;
     };
 }
+
+#endif /* stack_h */
