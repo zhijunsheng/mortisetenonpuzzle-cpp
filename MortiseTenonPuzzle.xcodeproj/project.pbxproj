@@ -22,6 +22,7 @@
 		07A4183B2048736C00F8EA53 /* ConstTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07A4183A2048736C00F8EA53 /* ConstTests.mm */; };
 		07A4183E2049CC9600F8EA53 /* DoublyLinkedListTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07A4183D2049CC9600F8EA53 /* DoublyLinkedListTests.mm */; };
 		07D3D257204BDBB300907FFC /* InsertionSortTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D256204BDBB300907FFC /* InsertionSortTests.mm */; };
+		07D3D259204BEEDC00907FFC /* BubbleSortTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D258204BEEDC00907FFC /* BubbleSortTests.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,6 +61,7 @@
 		07A4183C2049B9CE00F8EA53 /* list.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = list.h; sourceTree = "<group>"; };
 		07A4183D2049CC9600F8EA53 /* DoublyLinkedListTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DoublyLinkedListTests.mm; sourceTree = "<group>"; };
 		07D3D256204BDBB300907FFC /* InsertionSortTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = InsertionSortTests.mm; sourceTree = "<group>"; };
+		07D3D258204BEEDC00907FFC /* BubbleSortTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BubbleSortTests.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				07653542204ABC4C008FC177 /* binnode.h */,
 				07653543204AF740008FC177 /* BSTTests.mm */,
 				07D3D256204BDBB300907FFC /* InsertionSortTests.mm */,
+				07D3D258204BEEDC00907FFC /* BubbleSortTests.mm */,
 				078901E020467355009ED751 /* Info.plist */,
 			);
 			path = MortiseTenonPuzzleTests;
@@ -236,6 +239,7 @@
 				078901E920468AA6009ED751 /* RecursionTests.mm in Sources */,
 				078901EF20472D76009ED751 /* TemplateTests.mm in Sources */,
 				07653544204AF740008FC177 /* BSTTests.mm in Sources */,
+				07D3D259204BEEDC00907FFC /* BubbleSortTests.mm in Sources */,
 				076534E62049FC57008FC177 /* ArrayBasedListTests.mm in Sources */,
 				078901EB204695E3009ED751 /* SinglyLinkedListTests.mm in Sources */,
 				076534E8204A07C8008FC177 /* ArrayBasedStackTests.mm in Sources */,
