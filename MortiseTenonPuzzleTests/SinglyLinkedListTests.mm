@@ -72,12 +72,12 @@ public:
     
     // Constructors
     
-    Link(const E& elemval, Link* nextval = NULL) {
+    Link(const E& elemval, Link* nextval = nullptr) {
         element = elemval;
         next = nextval;
     }
     
-    Link(Link* nextval = NULL) {
+    Link(Link* nextval = nullptr) {
         next = nextval;
     }
     
@@ -96,7 +96,7 @@ public:
 
 // The freelist head pointer is actually created here
 template <typename E>
-Link<E>* Link<E>::freelist = NULL;
+Link<E>* Link<E>::freelist = nullptr;
 
 // Linked list implementation
 template <typename E> class LList: public ListTestsNS::List<E> {
@@ -112,7 +112,7 @@ private:
     }
     
     void removeAll() {  // Return link nodes to free store
-        while(head != NULL) {
+        while(head != nullptr) {
             curr = head;
             head = head->next;
             delete curr;
@@ -133,13 +133,13 @@ public:
     }
     
     void append(const E& it) {      // Append "it" to list
-        tail = tail->next = new Link<E>(it, NULL);
+        tail = tail->next = new Link<E>(it, nullptr);
         cnt++;
     }
     
     // Remove and return current element
     E remove() {
-        Assert(curr->next != NULL, "No element");
+        Assert(curr->next != nullptr, "No element");
         E it = curr->next->element;             // Remember value
         Link<E>* ltemp = curr->next;            // Rememmber link node
         if (tail == curr->next) tail = curr;    // Reset tail
@@ -185,7 +185,7 @@ public:
     }
     
     const E& getValue() const {                 // Return current element
-        Assert(curr->next != NULL, "No value");
+        Assert(curr->next != nullptr, "No value");
         return curr->next->element;
     }
 };
