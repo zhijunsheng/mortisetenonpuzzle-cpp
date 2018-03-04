@@ -23,6 +23,7 @@
 		07A4183E2049CC9600F8EA53 /* DoublyLinkedListTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07A4183D2049CC9600F8EA53 /* DoublyLinkedListTests.mm */; };
 		07D3D257204BDBB300907FFC /* InsertionSortTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D256204BDBB300907FFC /* InsertionSortTests.mm */; };
 		07D3D259204BEEDC00907FFC /* BubbleSortTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D258204BEEDC00907FFC /* BubbleSortTests.mm */; };
+		07D3D25B204BF83C00907FFC /* SelectionSortTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D25A204BF83C00907FFC /* SelectionSortTests.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +63,7 @@
 		07A4183D2049CC9600F8EA53 /* DoublyLinkedListTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DoublyLinkedListTests.mm; sourceTree = "<group>"; };
 		07D3D256204BDBB300907FFC /* InsertionSortTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = InsertionSortTests.mm; sourceTree = "<group>"; };
 		07D3D258204BEEDC00907FFC /* BubbleSortTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BubbleSortTests.mm; sourceTree = "<group>"; };
+		07D3D25A204BF83C00907FFC /* SelectionSortTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SelectionSortTests.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				07653543204AF740008FC177 /* BSTTests.mm */,
 				07D3D256204BDBB300907FFC /* InsertionSortTests.mm */,
 				07D3D258204BEEDC00907FFC /* BubbleSortTests.mm */,
+				07D3D25A204BF83C00907FFC /* SelectionSortTests.mm */,
 				078901E020467355009ED751 /* Info.plist */,
 			);
 			path = MortiseTenonPuzzleTests;
@@ -233,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D3D25B204BF83C00907FFC /* SelectionSortTests.mm in Sources */,
 				07A418392047A4CC00F8EA53 /* StaticVariableTests.mm in Sources */,
 				07A4183B2048736C00F8EA53 /* ConstTests.mm in Sources */,
 				07A4183E2049CC9600F8EA53 /* DoublyLinkedListTests.mm in Sources */,

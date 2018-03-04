@@ -1,5 +1,5 @@
 //
-//  BubbleSortTests.mm
+//  SelectionSortTests.mm
 //  MortiseTenonPuzzleTests
 //
 //  Created by Donald Sheng on 2018-03-04.
@@ -9,19 +9,19 @@
 #import <XCTest/XCTest.h>
 #import <iostream>
 
-@interface BubbleSortTests : XCTestCase
+@interface SelectionSortTests : XCTestCase
 @end
 
-@implementation BubbleSortTests
+@implementation SelectionSortTests
 
-- (void)testBubbleSort {
+- (void)testSelectionSort {
     int ints[] = {13, 3, 7, 5, 11};
-    BubbleSortTestsNS::bubsort<int, BubbleSortTestsNS::minintCompare>(ints, 5);
+    SelectionSortTestsNS::selsort<int, SelectionSortTestsNS::minintCompare>(ints, 5);
     int expectation[] = {3, 5, 7, 11, 13};
     XCTAssertTrue(std::equal(std::begin(expectation), std::end(expectation), std::begin(ints)));
 }
 
-namespace BubbleSortTestsNS {
+namespace SelectionSortTestsNS {
     
     // Swap two elements in a generic array
     template <typename E>
@@ -37,13 +37,16 @@ namespace BubbleSortTestsNS {
     };
     
     template <typename E, typename Comp>
-    void bubsort(E A[], int n) {    // Bubble Sort
-        for (int i = 0; i < n - 1; i++) {   // Bubble up i'th record
-            for (int j = n - 1; j > i; j--)
-                if (Comp::prior(A[j], A[j - 1]))
-                    swap(A, j, j - 1);
+    void selsort(E A[], int n) {            // Selection Sort
+        for (int i = 0; i < n - 1; i++) {   // Select i'th record
+            int lowindex = i;               // Remember its index
+            for (int j = n - 1; j > i; j--) // Find the least value
+                if (Comp::prior(A[j], A[lowindex]))
+                    lowindex = j;           // Put it in place
+            swap(A, i, lowindex);
         }
     }
 }
 
 @end
+
