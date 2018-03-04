@@ -16,38 +16,81 @@
 
 @implementation DoublyLinkedListTests
 
-- (void)testDoublyLinkedList {
+- (void)testDoublyLinkedListInsert {
     ListTestsNS::List<int> *intList = new DoublyLinkedListTestsNS::DoublyLinkedList<int>;
-    intList->append(13);
-    intList->append(12);
+    XCTAssertEqual(0, intList->length());
+    
+    intList->insert(13);
+    intList->insert(12);
     XCTAssertEqual(2, intList->length());
     XCTAssertEqual(0, intList->currPos());
     
-    intList->append(20);
-    intList->append(8);
-    intList->append(3);
+    intList->insert(20);
+    intList->insert(8);
+    intList->insert(3);
     
     XCTAssertEqual(5, intList->length());
     XCTAssertEqual(0, intList->currPos());
     
     intList->moveToStart();
     XCTAssertEqual(0, intList->currPos());
+    XCTAssertEqual(3, intList->getValue());
     intList->next();
-//    XCTAssertEqual(1, intList->currPos());
-//    XCTAssertEqual(12, intList->getValue());
+    XCTAssertEqual(1, intList->currPos());
+    XCTAssertEqual(8, intList->getValue());
     
-//    XCTAssertTrue(DoublyLinkedListTestsNS::find(*intList, 20));
-//    XCTAssertEqual(2, intList->currPos());
-//    XCTAssertTrue(DoublyLinkedListTestsNS::find(*intList, 12));
-//    XCTAssertEqual(1, intList->currPos());
-//    XCTAssertTrue(DoublyLinkedListTestsNS::find(*intList, 8));
-//    XCTAssertEqual(3, intList->currPos());
-//
-//    XCTAssertFalse(DoublyLinkedListTestsNS::find(*intList, 7));
-//    XCTAssertEqual(5, intList->currPos()); // curr was moved to end since 7 doesn't exist
-//
-//    intList->prev();
-//    XCTAssertEqual(4, intList->currPos());
+    XCTAssertTrue(DoublyLinkedListTestsNS::find(*intList, 20));
+    XCTAssertEqual(2, intList->currPos());
+    XCTAssertTrue(DoublyLinkedListTestsNS::find(*intList, 12));
+    XCTAssertEqual(3, intList->currPos());
+    XCTAssertTrue(DoublyLinkedListTestsNS::find(*intList, 8));
+    XCTAssertEqual(1, intList->currPos());
+    
+    XCTAssertFalse(DoublyLinkedListTestsNS::find(*intList, 7));
+    XCTAssertEqual(5, intList->currPos()); // curr was moved to end since 7 doesn't exist
+    
+    intList->prev();
+    XCTAssertEqual(4, intList->currPos());
+    
+    delete intList;
+    intList = nullptr;
+}
+
+- (void)testDoublyLinkedListAppend {
+    ListTestsNS::List<int> *intList = new DoublyLinkedListTestsNS::DoublyLinkedList<int>;
+    XCTAssertEqual(0, intList->length());
+    
+    intList->append(13);
+    intList->append(12);
+    XCTAssertEqual(2, intList->length());
+    XCTAssertEqual(0, intList->currPos());
+
+    intList->append(20);
+    intList->append(8);
+    intList->append(3);
+
+    XCTAssertEqual(5, intList->length());
+    XCTAssertEqual(0, intList->currPos());
+
+    intList->moveToStart();
+    XCTAssertEqual(0, intList->currPos());
+    XCTAssertEqual(13, intList->getValue());
+    intList->next();
+    XCTAssertEqual(1, intList->currPos());
+    XCTAssertEqual(12, intList->getValue());
+    
+    XCTAssertTrue(DoublyLinkedListTestsNS::find(*intList, 20));
+    XCTAssertEqual(2, intList->currPos());
+    XCTAssertTrue(DoublyLinkedListTestsNS::find(*intList, 12));
+    XCTAssertEqual(1, intList->currPos());
+    XCTAssertTrue(DoublyLinkedListTestsNS::find(*intList, 8));
+    XCTAssertEqual(3, intList->currPos());
+
+    XCTAssertFalse(DoublyLinkedListTestsNS::find(*intList, 7));
+    XCTAssertEqual(5, intList->currPos()); // curr was moved to end since 7 doesn't exist
+
+    intList->prev();
+    XCTAssertEqual(4, intList->currPos());
     
     delete intList;
     intList = nullptr;
@@ -138,19 +181,17 @@ namespace DoublyLinkedListTestsNS {
         
         // Insert "it" at current position
         void insert(const E& it) {
-            if (cnt == 0)
-                curr->next = new Link<E>(it, curr, curr->next);
-            else
+            if (curr == tail) {
+                tail = curr->next = new Link<E>(it, curr, curr->next);
+            } else {
                 curr->next = curr->next->prev = new Link<E>(it, curr, curr->next);
+            }
             cnt++;
         }
         
         // Append "it" to the end of the list
         void append(const E& it) {
-            if (cnt == 0)
-                tail->prev = new Link<E>(it, tail->prev, tail);
-            else
-                tail->prev = tail->prev->next = new Link<E>(it, tail->prev, tail);
+            tail = tail->next = new Link<E>(it, tail, tail->next);
             cnt++;
         }
         
@@ -176,7 +217,9 @@ namespace DoublyLinkedListTestsNS {
         }
         
         void next() {
-            if (curr != tail) curr = curr->next;
+            if (curr != tail) {
+                curr = curr->next;
+            }
         }
         
         int length() const { return cnt; }
