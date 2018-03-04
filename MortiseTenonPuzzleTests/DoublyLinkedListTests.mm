@@ -61,9 +61,14 @@
     XCTAssertEqual(0, intList->length());
     
     intList->append(13);
+    XCTAssertEqual(1, intList->length());
+    XCTAssertEqual(0, intList->currPos());
+    XCTAssertEqual(13, intList->getValue());
+    
     intList->append(12);
     XCTAssertEqual(2, intList->length());
     XCTAssertEqual(0, intList->currPos());
+    XCTAssertEqual(13, intList->getValue());
 
     intList->append(20);
     intList->append(8);
@@ -78,7 +83,7 @@
     intList->next();
     XCTAssertEqual(1, intList->currPos());
     XCTAssertEqual(12, intList->getValue());
-    
+
     XCTAssertTrue(DoublyLinkedListTestsNS::find(*intList, 20));
     XCTAssertEqual(2, intList->currPos());
     XCTAssertTrue(DoublyLinkedListTestsNS::find(*intList, 12));
@@ -91,6 +96,45 @@
 
     intList->prev();
     XCTAssertEqual(4, intList->currPos());
+    
+    delete intList;
+    intList = nullptr;
+}
+
+- (void)testDoublyLinkedListRemove {
+    ListTestsNS::List<int> *intList = new DoublyLinkedListTestsNS::DoublyLinkedList<int>;
+    XCTAssertEqual(0, intList->length());
+    
+    intList->append(13);
+    XCTAssertEqual(1, intList->length());
+    XCTAssertEqual(0, intList->currPos());
+    
+    XCTAssertEqual(13, intList->remove());
+    XCTAssertEqual(0, intList->length());
+
+    intList->next();
+    XCTAssertEqual(NULL, intList->remove());
+    XCTAssertEqual(0, intList->length());
+    
+    intList->append(13);
+    intList->append(12);
+    XCTAssertEqual(2, intList->length());
+    XCTAssertEqual(0, intList->currPos());
+    intList->next();
+    XCTAssertEqual(12, intList->remove());
+    XCTAssertEqual(1, intList->length());
+    intList->prev();
+    XCTAssertEqual(13, intList->remove());
+    XCTAssertEqual(0, intList->length());
+    
+    intList->append(13);
+    intList->append(12);
+    XCTAssertEqual(2, intList->length());
+    XCTAssertEqual(0, intList->currPos());
+    XCTAssertEqual(13, intList->remove());
+    XCTAssertEqual(1, intList->length());
+    XCTAssertEqual(12, intList->remove());
+    XCTAssertEqual(0, intList->length());
     
     delete intList;
     intList = nullptr;
@@ -162,7 +206,9 @@ namespace DoublyLinkedListTestsNS {
         int cnt;        // Size of list
         
         void init() {
-            curr = tail = head = new Link<E>;
+            head = curr = new Link<E>(NULL, nullptr, nullptr);
+            tail = new Link<E>(NULL, curr, nullptr);
+            curr->next = tail;
             cnt = 0;
         }
         
@@ -181,17 +227,13 @@ namespace DoublyLinkedListTestsNS {
         
         // Insert "it" at current position
         void insert(const E& it) {
-            if (curr == tail) {
-                tail = curr->next = new Link<E>(it, curr, curr->next);
-            } else {
-                curr->next = curr->next->prev = new Link<E>(it, curr, curr->next);
-            }
+            curr->next = curr->next->prev = new Link<E>(it, curr, curr->next);
             cnt++;
         }
         
         // Append "it" to the end of the list
         void append(const E& it) {
-            tail = tail->next = new Link<E>(it, tail, tail->next);
+            tail->prev = tail->prev->next = new Link<E>(it, tail->prev, tail);
             cnt++;
         }
         
@@ -212,14 +254,11 @@ namespace DoublyLinkedListTestsNS {
         
         // Move fence one step left; no change if left is empty
         void prev() {
-            if (curr != head)           // Can't back up from list head
-                curr = curr->prev;
+            if (curr != head) curr = curr->prev;        // Can't back up from list head
         }
         
         void next() {
-            if (curr != tail) {
-                curr = curr->next;
-            }
+            if (curr->next != tail) curr = curr->next;
         }
         
         int length() const { return cnt; }
