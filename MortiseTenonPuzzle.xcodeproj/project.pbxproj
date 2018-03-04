@@ -24,6 +24,7 @@
 		07D3D257204BDBB300907FFC /* InsertionSortTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D256204BDBB300907FFC /* InsertionSortTests.mm */; };
 		07D3D259204BEEDC00907FFC /* BubbleSortTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D258204BEEDC00907FFC /* BubbleSortTests.mm */; };
 		07D3D25B204BF83C00907FFC /* SelectionSortTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D25A204BF83C00907FFC /* SelectionSortTests.mm */; };
+		07D3D25D204C32E000907FFC /* SwapTwoIntsTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D25C204C32E000907FFC /* SwapTwoIntsTests.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,6 +65,7 @@
 		07D3D256204BDBB300907FFC /* InsertionSortTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = InsertionSortTests.mm; sourceTree = "<group>"; };
 		07D3D258204BEEDC00907FFC /* BubbleSortTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BubbleSortTests.mm; sourceTree = "<group>"; };
 		07D3D25A204BF83C00907FFC /* SelectionSortTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SelectionSortTests.mm; sourceTree = "<group>"; };
+		07D3D25C204C32E000907FFC /* SwapTwoIntsTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SwapTwoIntsTests.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		078901DD20467355009ED751 /* MortiseTenonPuzzleTests */ = {
 			isa = PBXGroup;
 			children = (
+				07D3D25C204C32E000907FFC /* SwapTwoIntsTests.mm */,
 				07A418362047971500F8EA53 /* ArrayTests.mm */,
 				07A4183A2048736C00F8EA53 /* ConstTests.mm */,
 				078901E6204676FB009ED751 /* SimpleLoopTests.mm */,
@@ -249,6 +252,7 @@
 				076534E8204A07C8008FC177 /* ArrayBasedStackTests.mm in Sources */,
 				078901F220475891009ED751 /* StringTests.mm in Sources */,
 				078901E7204676FB009ED751 /* SimpleLoopTests.mm in Sources */,
+				07D3D25D204C32E000907FFC /* SwapTwoIntsTests.mm in Sources */,
 				07D3D257204BDBB300907FFC /* InsertionSortTests.mm in Sources */,
 				07A418372047971500F8EA53 /* ArrayTests.mm in Sources */,
 				07653547204AFF6D008FC177 /* DictionaryTests.mm in Sources */,
