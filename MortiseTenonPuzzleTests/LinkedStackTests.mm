@@ -28,6 +28,13 @@
     intStack = nullptr;
 }
 
+- (void)testStackBasedFactorial {
+    StackTestsNS::Stack<int> *intStack = new LinkedStackTestsNS::LStack<int>;
+    XCTAssertEqual(120, LinkedStackTestsNS::fact(5, *intStack));
+    XCTAssertEqual(2432902008176640000, LinkedStackTestsNS::fact(20, *intStack));
+    XCTAssertEqual(7034535277573963776, LinkedStackTestsNS::fact(25, *intStack));
+}
+
 namespace LinkedStackTestsNS {
     
     // Singly linked list node with freelist support
@@ -117,6 +124,15 @@ namespace LinkedStackTestsNS {
         
         int length() const { return size; }  // Return length
     };
+    
+    long fact(int n, StackTestsNS::Stack<int>& S) {   // Compute n!
+        // To fit n! in a long variable, requre n <= 25
+        Assert(n >= 0 && n <= 25, "Input out of range");
+        while (n > 1) S.push(n--);      // Load up the stack
+        long result = 1;                // Holds final result
+        while (S.length() > 0) result *= S.pop();   // Compute
+        return result;
+    }
 }
 
 @end
