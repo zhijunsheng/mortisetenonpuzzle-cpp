@@ -15,7 +15,7 @@
 
 @implementation ArrayBasedStackTests
     
-- (void)testStack {
+- (void)testArrayBasedStack {
     StackTestsNS::Stack<int> *intStack = new ArrayBasedStackTestsNS::AStack<int>;
     intStack->push(13);
     intStack->push(7);

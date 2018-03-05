@@ -26,6 +26,7 @@
 		07D3D25B204BF83C00907FFC /* SelectionSortTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D25A204BF83C00907FFC /* SelectionSortTests.mm */; };
 		07D3D25D204C32E000907FFC /* SwapTwoIntsTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D25C204C32E000907FFC /* SwapTwoIntsTests.mm */; };
 		07D3D263204CE2F900907FFC /* TOHTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D262204CE2F900907FFC /* TOHTests.mm */; };
+		07D3D265204CF58E00907FFC /* LinkedStackTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D264204CF58E00907FFC /* LinkedStackTests.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -68,6 +69,7 @@
 		07D3D25A204BF83C00907FFC /* SelectionSortTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SelectionSortTests.mm; sourceTree = "<group>"; };
 		07D3D25C204C32E000907FFC /* SwapTwoIntsTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SwapTwoIntsTests.mm; sourceTree = "<group>"; };
 		07D3D262204CE2F900907FFC /* TOHTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TOHTests.mm; sourceTree = "<group>"; };
+		07D3D264204CF58E00907FFC /* LinkedStackTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LinkedStackTests.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				07A4183D2049CC9600F8EA53 /* DoublyLinkedListTests.mm */,
 				076534E9204A07E1008FC177 /* stack.h */,
 				076534E7204A07C8008FC177 /* ArrayBasedStackTests.mm */,
+				07D3D264204CF58E00907FFC /* LinkedStackTests.mm */,
 				07D3D262204CE2F900907FFC /* TOHTests.mm */,
 				078901F02047446B009ED751 /* templatevector.h */,
 				078901EE20472D76009ED751 /* TemplateTests.mm */,
@@ -243,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07D3D25B204BF83C00907FFC /* SelectionSortTests.mm in Sources */,
+				07D3D265204CF58E00907FFC /* LinkedStackTests.mm in Sources */,
 				07A418392047A4CC00F8EA53 /* StaticVariableTests.mm in Sources */,
 				07A4183B2048736C00F8EA53 /* ConstTests.mm in Sources */,
 				07D3D263204CE2F900907FFC /* TOHTests.mm in Sources */,
