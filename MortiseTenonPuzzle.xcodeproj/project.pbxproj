@@ -27,6 +27,8 @@
 		07D3D25D204C32E000907FFC /* SwapTwoIntsTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D25C204C32E000907FFC /* SwapTwoIntsTests.mm */; };
 		07D3D263204CE2F900907FFC /* TOHTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D262204CE2F900907FFC /* TOHTests.mm */; };
 		07D3D265204CF58E00907FFC /* LinkedStackTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D264204CF58E00907FFC /* LinkedStackTests.mm */; };
+		07D3D268204D3C9600907FFC /* ArrayBasedQueueTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D267204D3C9600907FFC /* ArrayBasedQueueTests.mm */; };
+		07D3D26A204D3CAA00907FFC /* LinkedQueueTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D269204D3CAA00907FFC /* LinkedQueueTests.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -70,6 +72,9 @@
 		07D3D25C204C32E000907FFC /* SwapTwoIntsTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SwapTwoIntsTests.mm; sourceTree = "<group>"; };
 		07D3D262204CE2F900907FFC /* TOHTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TOHTests.mm; sourceTree = "<group>"; };
 		07D3D264204CF58E00907FFC /* LinkedStackTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LinkedStackTests.mm; sourceTree = "<group>"; };
+		07D3D266204D34F900907FFC /* queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = queue.h; sourceTree = "<group>"; };
+		07D3D267204D3C9600907FFC /* ArrayBasedQueueTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ArrayBasedQueueTests.mm; sourceTree = "<group>"; };
+		07D3D269204D3CAA00907FFC /* LinkedQueueTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LinkedQueueTests.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +139,9 @@
 				076534E7204A07C8008FC177 /* ArrayBasedStackTests.mm */,
 				07D3D264204CF58E00907FFC /* LinkedStackTests.mm */,
 				07D3D262204CE2F900907FFC /* TOHTests.mm */,
+				07D3D266204D34F900907FFC /* queue.h */,
+				07D3D267204D3C9600907FFC /* ArrayBasedQueueTests.mm */,
+				07D3D269204D3CAA00907FFC /* LinkedQueueTests.mm */,
 				078901F02047446B009ED751 /* templatevector.h */,
 				078901EE20472D76009ED751 /* TemplateTests.mm */,
 				07653545204AFD5F008FC177 /* dictionary.h */,
@@ -248,6 +256,7 @@
 				07D3D25B204BF83C00907FFC /* SelectionSortTests.mm in Sources */,
 				07D3D265204CF58E00907FFC /* LinkedStackTests.mm in Sources */,
 				07A418392047A4CC00F8EA53 /* StaticVariableTests.mm in Sources */,
+				07D3D268204D3C9600907FFC /* ArrayBasedQueueTests.mm in Sources */,
 				07A4183B2048736C00F8EA53 /* ConstTests.mm in Sources */,
 				07D3D263204CE2F900907FFC /* TOHTests.mm in Sources */,
 				07A4183E2049CC9600F8EA53 /* DoublyLinkedListTests.mm in Sources */,
@@ -264,6 +273,7 @@
 				07D3D257204BDBB300907FFC /* InsertionSortTests.mm in Sources */,
 				07A418372047971500F8EA53 /* ArrayTests.mm in Sources */,
 				07653547204AFF6D008FC177 /* DictionaryTests.mm in Sources */,
+				07D3D26A204D3CAA00907FFC /* LinkedQueueTests.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
