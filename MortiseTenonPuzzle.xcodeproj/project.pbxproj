@@ -29,6 +29,7 @@
 		07D3D265204CF58E00907FFC /* LinkedStackTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D264204CF58E00907FFC /* LinkedStackTests.mm */; };
 		07D3D268204D3C9600907FFC /* ArrayBasedQueueTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D267204D3C9600907FFC /* ArrayBasedQueueTests.mm */; };
 		07D3D26A204D3CAA00907FFC /* LinkedQueueTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D269204D3CAA00907FFC /* LinkedQueueTests.mm */; };
+		07D3D26C204DB6A200907FFC /* ShuffleCardsTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D26B204DB6A200907FFC /* ShuffleCardsTests.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,6 +76,7 @@
 		07D3D266204D34F900907FFC /* queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = queue.h; sourceTree = "<group>"; };
 		07D3D267204D3C9600907FFC /* ArrayBasedQueueTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ArrayBasedQueueTests.mm; sourceTree = "<group>"; };
 		07D3D269204D3CAA00907FFC /* LinkedQueueTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LinkedQueueTests.mm; sourceTree = "<group>"; };
+		07D3D26B204DB6A200907FFC /* ShuffleCardsTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ShuffleCardsTests.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				07D3D25C204C32E000907FFC /* SwapTwoIntsTests.mm */,
+				07D3D26B204DB6A200907FFC /* ShuffleCardsTests.mm */,
 				07A418362047971500F8EA53 /* ArrayTests.mm */,
 				07A4183A2048736C00F8EA53 /* ConstTests.mm */,
 				078901E6204676FB009ED751 /* SimpleLoopTests.mm */,
@@ -272,6 +275,7 @@
 				07D3D25D204C32E000907FFC /* SwapTwoIntsTests.mm in Sources */,
 				07D3D257204BDBB300907FFC /* InsertionSortTests.mm in Sources */,
 				07A418372047971500F8EA53 /* ArrayTests.mm in Sources */,
+				07D3D26C204DB6A200907FFC /* ShuffleCardsTests.mm in Sources */,
 				07653547204AFF6D008FC177 /* DictionaryTests.mm in Sources */,
 				07D3D26A204D3CAA00907FFC /* LinkedQueueTests.mm in Sources */,
 			);
