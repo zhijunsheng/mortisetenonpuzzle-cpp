@@ -32,6 +32,7 @@
 		07D3D26C204DB6A200907FFC /* ShuffleCardsTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D26B204DB6A200907FFC /* ShuffleCardsTests.mm */; };
 		07D3D2702053643B00907FFC /* VectorTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D26F2053643B00907FFC /* VectorTests.mm */; };
 		07D3D27220539ACF00907FFC /* IntBSTTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D27120539ACF00907FFC /* IntBSTTests.mm */; };
+		07D3D274205422FE00907FFC /* TreeSetTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D273205422FE00907FFC /* TreeSetTests.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -81,6 +82,7 @@
 		07D3D26B204DB6A200907FFC /* ShuffleCardsTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ShuffleCardsTests.mm; sourceTree = "<group>"; };
 		07D3D26F2053643B00907FFC /* VectorTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = VectorTests.mm; sourceTree = "<group>"; };
 		07D3D27120539ACF00907FFC /* IntBSTTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = IntBSTTests.mm; sourceTree = "<group>"; };
+		07D3D273205422FE00907FFC /* TreeSetTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TreeSetTests.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				07653545204AFD5F008FC177 /* dictionary.h */,
 				07653546204AFF6D008FC177 /* DictionaryTests.mm */,
 				07D3D27120539ACF00907FFC /* IntBSTTests.mm */,
+				07D3D273205422FE00907FFC /* TreeSetTests.mm */,
 				07653542204ABC4C008FC177 /* binnode.h */,
 				07653543204AF740008FC177 /* BSTTests.mm */,
 				07D3D256204BDBB300907FFC /* InsertionSortTests.mm */,
@@ -271,6 +274,7 @@
 				07D3D2702053643B00907FFC /* VectorTests.mm in Sources */,
 				07A4183E2049CC9600F8EA53 /* DoublyLinkedListTests.mm in Sources */,
 				078901E920468AA6009ED751 /* RecursionTests.mm in Sources */,
+				07D3D274205422FE00907FFC /* TreeSetTests.mm in Sources */,
 				078901EF20472D76009ED751 /* TemplateTests.mm in Sources */,
 				07653544204AF740008FC177 /* BSTTests.mm in Sources */,
 				07D3D259204BEEDC00907FFC /* BubbleSortTests.mm in Sources */,

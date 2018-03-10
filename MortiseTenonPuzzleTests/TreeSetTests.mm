@@ -1,40 +1,40 @@
 //
-//  IntBSTTests.mm
+//  TreeSetTests.mm
 //  MortiseTenonPuzzleTests
 //
-//  Created by Donald Sheng on 2018-03-09.
+//  Created by Donald Sheng on 2018-03-10.
 //  Copyright © 2018 GoldThumb Inc. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 #import <iostream>
 
-@interface IntBSTTests : XCTestCase
+@interface TreeSetTests : XCTestCase
 @end
 
-@implementation IntBSTTests
+@implementation TreeSetTests
 
 - (void)testIntBST {
     
     /*
-            42
-           /  \
-          59  27
-                \
-                86
+     42
+     /  \
+     59  27
+     \
+     86
      
      */
-    IntBSTTestsNS::TreeNode* node = new IntBSTTestsNS::TreeNode(42);
-    node->left = new IntBSTTestsNS::TreeNode(59);
-    node->right = new IntBSTTestsNS::TreeNode(27);
-    node->right->right = new IntBSTTestsNS::TreeNode(86);
+    TreeSetTestsNS::TreeNode* node = new TreeSetTestsNS::TreeNode(42);
+    node->left = new TreeSetTestsNS::TreeNode(59);
+    node->right = new TreeSetTestsNS::TreeNode(27);
+    node->right->right = new TreeSetTestsNS::TreeNode(86);
     
-    IntBSTTestsNS::BinaryTree tree(node);
+    TreeSetTestsNS::TreeSet tree(node);
     
     tree.print();
 }
 
-namespace IntBSTTestsNS {
+namespace TreeSetTestsNS {
     
     struct TreeNode {
         int data;
@@ -52,12 +52,12 @@ namespace IntBSTTestsNS {
         }
     };
     
-    class BinaryTree {
+    class TreeSet {
     public:
         bool contains(int);
         void printSideways();
         
-        BinaryTree(TreeNode* initialRoot) {
+        TreeSet(TreeNode* initialRoot) {
             root = initialRoot;
         }
         
@@ -79,3 +79,4 @@ namespace IntBSTTestsNS {
 }
 
 @end
+
