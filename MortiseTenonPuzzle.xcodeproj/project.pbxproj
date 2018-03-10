@@ -30,6 +30,8 @@
 		07D3D268204D3C9600907FFC /* ArrayBasedQueueTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D267204D3C9600907FFC /* ArrayBasedQueueTests.mm */; };
 		07D3D26A204D3CAA00907FFC /* LinkedQueueTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D269204D3CAA00907FFC /* LinkedQueueTests.mm */; };
 		07D3D26C204DB6A200907FFC /* ShuffleCardsTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D26B204DB6A200907FFC /* ShuffleCardsTests.mm */; };
+		07D3D2702053643B00907FFC /* VectorTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D26F2053643B00907FFC /* VectorTests.mm */; };
+		07D3D27220539ACF00907FFC /* IntBSTTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D27120539ACF00907FFC /* IntBSTTests.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -77,6 +79,8 @@
 		07D3D267204D3C9600907FFC /* ArrayBasedQueueTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ArrayBasedQueueTests.mm; sourceTree = "<group>"; };
 		07D3D269204D3CAA00907FFC /* LinkedQueueTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LinkedQueueTests.mm; sourceTree = "<group>"; };
 		07D3D26B204DB6A200907FFC /* ShuffleCardsTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ShuffleCardsTests.mm; sourceTree = "<group>"; };
+		07D3D26F2053643B00907FFC /* VectorTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = VectorTests.mm; sourceTree = "<group>"; };
+		07D3D27120539ACF00907FFC /* IntBSTTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = IntBSTTests.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,7 @@
 				07A418362047971500F8EA53 /* ArrayTests.mm */,
 				07A4183A2048736C00F8EA53 /* ConstTests.mm */,
 				078901E6204676FB009ED751 /* SimpleLoopTests.mm */,
+				07D3D26F2053643B00907FFC /* VectorTests.mm */,
 				078901F120475891009ED751 /* StringTests.mm */,
 				07A418382047A4CC00F8EA53 /* StaticVariableTests.mm */,
 				078901E820468AA6009ED751 /* RecursionTests.mm */,
@@ -149,6 +154,7 @@
 				078901EE20472D76009ED751 /* TemplateTests.mm */,
 				07653545204AFD5F008FC177 /* dictionary.h */,
 				07653546204AFF6D008FC177 /* DictionaryTests.mm */,
+				07D3D27120539ACF00907FFC /* IntBSTTests.mm */,
 				07653542204ABC4C008FC177 /* binnode.h */,
 				07653543204AF740008FC177 /* BSTTests.mm */,
 				07D3D256204BDBB300907FFC /* InsertionSortTests.mm */,
@@ -262,6 +268,7 @@
 				07D3D268204D3C9600907FFC /* ArrayBasedQueueTests.mm in Sources */,
 				07A4183B2048736C00F8EA53 /* ConstTests.mm in Sources */,
 				07D3D263204CE2F900907FFC /* TOHTests.mm in Sources */,
+				07D3D2702053643B00907FFC /* VectorTests.mm in Sources */,
 				07A4183E2049CC9600F8EA53 /* DoublyLinkedListTests.mm in Sources */,
 				078901E920468AA6009ED751 /* RecursionTests.mm in Sources */,
 				078901EF20472D76009ED751 /* TemplateTests.mm in Sources */,
@@ -278,6 +285,7 @@
 				07D3D26C204DB6A200907FFC /* ShuffleCardsTests.mm in Sources */,
 				07653547204AFF6D008FC177 /* DictionaryTests.mm in Sources */,
 				07D3D26A204D3CAA00907FFC /* LinkedQueueTests.mm in Sources */,
+				07D3D27220539ACF00907FFC /* IntBSTTests.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
