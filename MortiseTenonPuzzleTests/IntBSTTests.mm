@@ -29,7 +29,7 @@
     node->right = new IntBSTTestsNS::TreeNode(27);
     node->right->right = new IntBSTTestsNS::TreeNode(86);
     
-    IntBSTTestsNS::BinaryTree tree(node);
+    IntBSTTestsNS::TreeSet tree(node);
     
     tree.print();
 }
@@ -52,12 +52,12 @@ namespace IntBSTTestsNS {
         }
     };
     
-    class BinaryTree {
+    class TreeSet {
     public:
         bool contains(int);
         void printSideways();
         
-        BinaryTree(TreeNode* initialRoot) {
+        TreeSet(TreeNode* initialRoot) {
             root = initialRoot;
         }
         
