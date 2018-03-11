@@ -19,9 +19,9 @@
     /*
             42
            /  \
-          59  27
+         59    27
                 \
-                86
+                 86
      
      */
     IntBSTTestsNS::TreeNode* node = new IntBSTTestsNS::TreeNode(42);
