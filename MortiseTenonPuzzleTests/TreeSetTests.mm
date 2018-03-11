@@ -106,25 +106,63 @@
     TreeSetTestsNS::TreeSet tree;
     tree.coolAdd(4);
     tree.coolAdd(2);
+    tree.coolAdd(6);
     tree.coolAdd(5);
     tree.coolAdd(1);
     tree.coolAdd(7);
-    tree.coolAdd(6);
     tree.coolAdd(3);
     
     /*
      *
      *      4
      *    /   \
-     *   2     5
+     *   2     6
      *  / \   / \
-     * 1   3 6   7
+     * 1   3 5   7
      *
      */
+    tree.printSideways();
+    
     XCTAssertTrue(tree.contains(5));
     tree.remove(5);
     XCTAssertFalse(tree.contains(5));
-    tree.print();
+    tree.printSideways();
+    
+    XCTAssertTrue(tree.contains(4));
+    tree.remove(4);
+    XCTAssertFalse(tree.contains(4));
+    tree.printSideways();
+}
+
+- (void)testPrintSideways {
+    TreeSetTestsNS::TreeSet tree;
+    tree.coolAdd(4);
+    tree.coolAdd(2);
+    tree.coolAdd(6);
+    tree.coolAdd(5);
+    tree.coolAdd(1);
+    tree.coolAdd(7);
+    tree.coolAdd(3);
+    
+    /*
+     *
+     *      4
+     *    /   \
+     *   2     6
+     *  / \   / \
+     * 1   3 5   7
+     *
+     */
+    tree.printSideways();
+    /*
+     *            7
+     *        6
+     *            5
+     *    4
+     *            3
+     *        2
+     *            1
+     */
 }
 
 namespace TreeSetTestsNS {
@@ -147,8 +185,6 @@ namespace TreeSetTestsNS {
     
     class TreeSet {
     public:
-        void printSideways();
-        
         TreeSet() {
             root = NULL;
         }
@@ -181,8 +217,22 @@ namespace TreeSetTestsNS {
             remove(root, value);
         }
         
+        void printSideways() const {
+            std::cout << "/*" << std::endl;
+            printSideways(root, " *    ");
+            std::cout << " */" << std::endl;
+        }
+        
     private:
         TreeNode* root;
+        
+        void printSideways(TreeNode* node, std::string indent) const {
+            if (node != NULL) {
+                printSideways(node->right, indent + "    ");
+                std::cout << indent << node->data << std::endl;
+                printSideways(node->left, indent + "    ");
+            }
+        }
         
         void add(TreeNode* node, int value) {
             if (root == NULL) {
