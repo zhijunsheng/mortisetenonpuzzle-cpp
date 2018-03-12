@@ -33,6 +33,7 @@
 		07D3D2702053643B00907FFC /* VectorTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D26F2053643B00907FFC /* VectorTests.mm */; };
 		07D3D27220539ACF00907FFC /* IntBSTTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D27120539ACF00907FFC /* IntBSTTests.mm */; };
 		07D3D274205422FE00907FFC /* TreeSetTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D273205422FE00907FFC /* TreeSetTests.mm */; };
+		07D3D27C2056414000907FFC /* LvalueRvalueTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D3D27B2056414000907FFC /* LvalueRvalueTests.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -83,6 +84,7 @@
 		07D3D26F2053643B00907FFC /* VectorTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = VectorTests.mm; sourceTree = "<group>"; };
 		07D3D27120539ACF00907FFC /* IntBSTTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = IntBSTTests.mm; sourceTree = "<group>"; };
 		07D3D273205422FE00907FFC /* TreeSetTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TreeSetTests.mm; sourceTree = "<group>"; };
+		07D3D27B2056414000907FFC /* LvalueRvalueTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LvalueRvalueTests.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 		078901DD20467355009ED751 /* MortiseTenonPuzzleTests */ = {
 			isa = PBXGroup;
 			children = (
+				07D3D27B2056414000907FFC /* LvalueRvalueTests.mm */,
 				07D3D25C204C32E000907FFC /* SwapTwoIntsTests.mm */,
 				07D3D26B204DB6A200907FFC /* ShuffleCardsTests.mm */,
 				07A418362047971500F8EA53 /* ArrayTests.mm */,
@@ -280,6 +283,7 @@
 				07D3D259204BEEDC00907FFC /* BubbleSortTests.mm in Sources */,
 				076534E62049FC57008FC177 /* ArrayBasedListTests.mm in Sources */,
 				078901EB204695E3009ED751 /* SinglyLinkedListTests.mm in Sources */,
+				07D3D27C2056414000907FFC /* LvalueRvalueTests.mm in Sources */,
 				076534E8204A07C8008FC177 /* ArrayBasedStackTests.mm in Sources */,
 				078901F220475891009ED751 /* StringTests.mm in Sources */,
 				078901E7204676FB009ED751 /* SimpleLoopTests.mm in Sources */,
