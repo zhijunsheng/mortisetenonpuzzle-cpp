@@ -43,6 +43,52 @@
     intQueue = nullptr;
 }
 
+- (void)testQueueFun {
+    QueueTestsNS::Queue<int>* intQueue = new ArrayBasedQueueTestsNS::AQueue<int>;
+    for (int i = 1; i <= 6; i++) {
+        intQueue->enqueue(i);
+    }
+    XCTAssertEqual(6, intQueue->length());
+    
+    for (int i = 0; i < intQueue->length(); i++) {
+        std::cout << intQueue->dequeue() << " ";
+    }
+    XCTAssertEqual(3, intQueue->length());
+    std::cout << intQueue << " size " << intQueue->length() << std::endl;
+    
+    delete intQueue;
+    intQueue = nullptr;
+}
+
+- (void)testStutter {
+    ArrayBasedQueueTestsNS::AQueue<int>* intQueue = new ArrayBasedQueueTestsNS::AQueue<int>;
+    for (int i = 1; i <= 3; i++) {
+        intQueue->enqueue(i);
+    }
+    XCTAssertEqual(3, intQueue->length());
+    
+    ArrayBasedQueueTestsNS::stutter(intQueue);
+    while (intQueue->length() > 0) {
+        std::cout << intQueue->dequeue() << " ";
+    }
+    std::cout << std::endl;
+}
+
+
+- (void)testStutter2 {
+    ArrayBasedQueueTestsNS::AQueue<int>* intQueue = new ArrayBasedQueueTestsNS::AQueue<int>;
+    for (int i = 1; i <= 3; i++) {
+        intQueue->enqueue(i);
+    }
+    XCTAssertEqual(3, intQueue->length());
+    
+    ArrayBasedQueueTestsNS::stutter2(intQueue);
+    while (intQueue->length() > 0) {
+        std::cout << intQueue->dequeue() << " ";
+    }
+    std::cout << std::endl;
+}
+
 namespace ArrayBasedQueueTestsNS {
     
     void Assert(bool val, std::string s) {
@@ -94,6 +140,25 @@ namespace ArrayBasedQueueTestsNS {
             return ((rear + maxSize) - front + 1) % maxSize;
         }
     };
+    
+    void stutter(AQueue<int>*& q) {
+        AQueue<int>* q2 = new AQueue<int>();
+        while (q->length() > 0) {
+            int n = q->dequeue();
+            q2->enqueue(n);
+            q2->enqueue(n);
+        }
+        q = q2;
+    }
+    
+    void stutter2(AQueue<int>* q) {
+        int len = q->length();
+        for (int i = 0; i < len; i++) {
+            int n = q->dequeue();
+            q->enqueue(n);
+            q->enqueue(n);
+        }
+    }
 }
 
 @end
