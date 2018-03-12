@@ -61,7 +61,7 @@
 }
 
 - (void)testStutter {
-    ArrayBasedQueueTestsNS::AQueue<int>* intQueue = new ArrayBasedQueueTestsNS::AQueue<int>;
+    QueueTestsNS::Queue<int>* intQueue = new ArrayBasedQueueTestsNS::AQueue<int>;
     for (int i = 1; i <= 3; i++) {
         intQueue->enqueue(i);
     }
@@ -74,9 +74,8 @@
     std::cout << std::endl;
 }
 
-
 - (void)testStutter2 {
-    ArrayBasedQueueTestsNS::AQueue<int>* intQueue = new ArrayBasedQueueTestsNS::AQueue<int>;
+    QueueTestsNS::Queue<int>* intQueue = new ArrayBasedQueueTestsNS::AQueue<int>;
     for (int i = 1; i <= 3; i++) {
         intQueue->enqueue(i);
     }
@@ -141,8 +140,8 @@ namespace ArrayBasedQueueTestsNS {
         }
     };
     
-    void stutter(AQueue<int>*& q) {
-        AQueue<int>* q2 = new AQueue<int>();
+    void stutter(QueueTestsNS::Queue<int>*& q) {
+        QueueTestsNS::Queue<int>* q2 = new AQueue<int>();
         while (q->length() > 0) {
             int n = q->dequeue();
             q2->enqueue(n);
@@ -151,7 +150,7 @@ namespace ArrayBasedQueueTestsNS {
         q = q2;
     }
     
-    void stutter2(AQueue<int>* q) {
+    void stutter2(QueueTestsNS::Queue<int>* q) {
         int len = q->length();
         for (int i = 0; i < len; i++) {
             int n = q->dequeue();
