@@ -88,6 +88,20 @@
     std::cout << std::endl;
 }
 
+- (void)testStutter3 {
+    QueueTestsNS::Queue<int>* intQueue = new ArrayBasedQueueTestsNS::AQueue<int>;
+    for (int i = 1; i <= 3; i++) {
+        intQueue->enqueue(i);
+    }
+    XCTAssertEqual(3, intQueue->length());
+    
+    ArrayBasedQueueTestsNS::stutter3(*intQueue);
+    while (intQueue->length() > 0) {
+        std::cout << intQueue->dequeue() << " ";
+    }
+    std::cout << std::endl;
+}
+
 namespace ArrayBasedQueueTestsNS {
     
     void Assert(bool val, std::string s) {
@@ -157,6 +171,19 @@ namespace ArrayBasedQueueTestsNS {
             q->enqueue(n);
             q->enqueue(n);
         }
+    }
+    
+    void stutter3(QueueTestsNS::Queue<int>& q) {
+        int len = q.length();
+        for (int i = 0; i < len; i++) {
+            int n = q.dequeue();
+            q.enqueue(n);
+            q.enqueue(n);
+        }
+    }
+    
+    void mirror(QueueTestsNS::Queue<std::string>& q) {
+        
     }
 }
 
